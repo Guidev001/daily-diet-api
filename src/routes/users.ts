@@ -10,7 +10,7 @@ export async function usersRoutes(app: FastifyInstance) {
   }, async (request) => {
     const { sessionId } = request.cookies
 
-    const users = await knex('users')
+    const users = await knex('users ')
       .where('session_id', sessionId)
       .select()
 
